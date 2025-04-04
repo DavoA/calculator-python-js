@@ -1,2 +1,6 @@
 # calculator-python-js
-for the calculator task 
+
+After cloning run
+```
+docker-compose up -d --build
+```
