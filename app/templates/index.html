@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator</title>
+        <link rel="stylesheet" href="../static/css/style.css">
+    </head>
+    <body>
+        <div class="calculator">
+            <input type="text" class="display" id="display" disabled>
+            <div class="buttons">
+                <button onclick="sendToServer('C')" class="clear">C</button>
+                <button onclick="sendToServer('÷')" class="operator">÷</button>
+                <button onclick="sendToServer('×')" class="operator">×</button>
+                <button onclick="sendToServer('⌫')" class="backspace">⌫</button>
+                <button onclick="sendToServer('7')">7</button>
+                <button onclick="sendToServer('8')">8</button>
+                <button onclick="sendToServer('9')">9</button>
+                <button onclick="sendToServer('-')" class="operator">-</button>
+                <button onclick="sendToServer('4')">4</button>
+                <button onclick="sendToServer('5')">5</button>
+                <button onclick="sendToServer('6')">6</button>
+                <button onclick="sendToServer('+')" class="operator">+</button>
+                <button onclick="sendToServer('1')">1</button>
+                <button onclick="sendToServer('2')">2</button>
+                <button onclick="sendToServer('3')">3</button>
+                <button onclick="sendToServer('=')" class="equals">=</button>
+                <button onclick="sendToServer('0')" class="zero">0</button>
+                <button onclick="sendToServer('.')">.</button>
+            </div>
+        </div>
+        <script src="../static/js/calculator.js"></script>
+    </body>
+</html>
