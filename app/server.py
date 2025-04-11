@@ -10,10 +10,9 @@ app.config['MYSQL_PASSWORD'] = 'root'
 app.config['MYSQL_DB'] = 'calculator_db'
 
 def parse_expression(expression):
-    parts = re.split(r'(\D)', expression)
+    parts = re.findall(r'(?<!\d)-?\d+\.\d+|(?<!\d)-?\d+|[+*/×÷()-]', expression)
     if len(parts) != 3:
         raise ValueError("Invalid expression format")
-
     num1 = float(parts[0])
     op = parts[1]
     num2 = float(parts[2])
