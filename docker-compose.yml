@@ -1,8 +1,25 @@
 version: "3.8"
 
 services:
+  mysql:
+    image: mysql:8.0
+    container_name: calculator_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: calculator_db
+    ports:
+      - "3307:3306"
+    networks:
+      - calculator_network
   calculator:
     build: .
     ports: 
       - "5000:5000"
     restart: unless-stopped
+    networks:
+      - calculator_network
+
+networks:
+  calculator_network:
+    driver: bridge
